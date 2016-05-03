@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  RootViewController.m
 //  iOS_PageController01
 //
 //  Created by NishiokaKohei on 2016/05/03.
 //  Copyright © 2016年 Kohei. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "RootViewController.h"
 
-@interface ViewController ()
+@interface RootViewController ()
 
 @end
 
-@implementation ViewController
+@implementation RootViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,4 +24,6 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)startToGoBtn:(id)sender {
+}
 @end

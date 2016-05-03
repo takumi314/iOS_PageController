@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RootViewController.h
 //  iOS_PageController01
 //
 //  Created by NishiokaKohei on 2016/05/03.
@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface RootViewController : UIViewController
 
+- (IBAction)startToGoBtn:(id)sender;
 
 @end
 
