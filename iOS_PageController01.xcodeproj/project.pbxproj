@@ -13,6 +13,7 @@
 		E1F149E31CD8680F0014BB9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1F149E11CD8680F0014BB9E /* Main.storyboard */; };
 		E1F149E51CD8680F0014BB9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1F149E41CD8680F0014BB9E /* Assets.xcassets */; };
 		E1F149E81CD8680F0014BB9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1F149E61CD8680F0014BB9E /* LaunchScreen.storyboard */; };
+		E1F149F11CD880FF0014BB9E /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F149F01CD880FF0014BB9E /* PageContentViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		E1F149E41CD8680F0014BB9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1F149E71CD8680F0014BB9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1F149E91CD8680F0014BB9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1F149EF1CD880FF0014BB9E /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
+		E1F149F01CD880FF0014BB9E /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				E1F149E61CD8680F0014BB9E /* LaunchScreen.storyboard */,
 				E1F149E91CD8680F0014BB9E /* Info.plist */,
 				E1F149D81CD8680F0014BB9E /* Supporting Files */,
+				E1F149EF1CD880FF0014BB9E /* PageContentViewController.h */,
+				E1F149F01CD880FF0014BB9E /* PageContentViewController.m */,
 			);
 			path = iOS_PageController01;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1F149E01CD8680F0014BB9E /* ViewController.m in Sources */,
+				E1F149F11CD880FF0014BB9E /* PageContentViewController.m in Sources */,
 				E1F149DD1CD8680F0014BB9E /* AppDelegate.m in Sources */,
 				E1F149DA1CD8680F0014BB9E /* main.m in Sources */,
 			);

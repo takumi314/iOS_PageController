@@ -15,6 +15,16 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mY7-CX-flf">
+                                <rect key="frame" x="98" y="484" width="218" height="70"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Start agein">
+                                    <color key="titleColor" red="1" green="0.2106129669" blue="0.26331051300000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
@@ -23,10 +33,10 @@
             </objects>
             <point key="canvasLocation" x="365" y="426"/>
         </scene>
-        <!--View Controller-->
+        <!--Page Content View Controller-->
         <scene sceneID="MeM-2T-nX8">
             <objects>
-                <viewController storyboardIdentifier="PageContentViewController" id="cZy-YG-3tP" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PageContentViewController" id="cZy-YG-3tP" customClass="PageContentViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0vd-aQ-vfI"/>
                         <viewControllerLayoutGuide type="bottom" id="rSl-QM-i2f"/>
@@ -61,6 +71,10 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="imageOnTheBackground" destination="yxt-p4-Kbf" id="e2N-8b-kCZ"/>
+                        <outlet property="titleLabel" destination="JYf-ob-sQd" id="wBw-8P-YOG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LNT-ys-j0R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
