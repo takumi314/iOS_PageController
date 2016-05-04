@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 
+
 @interface RootViewController ()
 
 @end
@@ -17,6 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    _pageTitles = @[@"First Page", @"Second Page", @"Third Page", @"Forth Page"]; 
+    
+    _pageImages = @[@"page1.png", @"page2.png", @"page3.png", @"page4.png"];
+    
 }
 
 - (void)didReceiveMemoryWarning {

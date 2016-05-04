@@ -15,8 +15,15 @@
 @implementation PageContentViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [super viewDidLoad];    // Do any additional setup after loading the view.
+    
+    // imageFile の画像をイメージオブジェクトに渡す
+    _imageOnTheBackground.image = [UIImage imageNamed:_imageFile];
+    // titleText の文字列をラベルオブジェクトに渡す
+    _titleLabel.text = _titleText;
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
