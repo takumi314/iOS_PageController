@@ -7,7 +7,7 @@
         <!--Root View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="RootPageVireController" id="BYZ-38-t0r" customClass="RootViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RootVireController" id="BYZ-38-t0r" customClass="RootViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -86,7 +86,7 @@
         <!--Page View Controller-->
         <scene sceneID="Vri-Rs-tQt">
             <objects>
-                <pageViewController storyboardIdentifier="PageController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Nus-YM-lQ9" sceneMemberID="viewController">
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Nus-YM-lQ9" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R6d-UY-iXI" userLabel="First Responder" sceneMemberID="firstResponder"/>
