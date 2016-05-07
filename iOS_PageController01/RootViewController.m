@@ -26,20 +26,26 @@
     
     // Create page view controller
     self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
-    self.pageViewController.dataSource = self;
+    self.pageViewController.dataSource = self;      // 何が起こった？
+    
     
     PageContentViewController *startingViewController = [self viewControllerAtIndex:0];
-    NSArray *viewControllers = @[startingViewController];
+    NSArray *viewControllers = @[startingViewController];                   // どうして配列に一度収納するのか？
     [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
-//    // Change the size of page view controller
+    // Change the size of page view controller
 //    self.pageViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 30);
-//    
-//    [self addChildViewController:_pageViewController];
-//    [self.view addSubview:_pageViewController.view];
-//    [self.pageViewController didMoveToParentViewController:self];
+//
+    
+    
+    [self addChildViewController:_pageViewController];
+    [self.view addSubview:_pageViewController.view];
+    [self.pageViewController didMoveToParentViewController:self];
     
 }
+
+
+#pragma mark - To count the pages for Page View Controller
 
 
 //全ページ数をカウント
@@ -56,10 +62,7 @@
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+#pragma mark - Actions after pusing the button 'Start again.'.
 
 
 - (IBAction)startToGoBtn:(id)sender {
@@ -70,7 +73,9 @@
 
 
 
-- (PageContentViewController *)viewControllerAtIndex:(NSInteger )index {        // ページ : indexに応じて、新たなインスタンスを生成またはそのまま。
+
+
+- (PageContentViewController *)viewControllerAtIndex:(NSUInteger )index {        // ページ : indexに応じて、新たなインスタンスを生成またはそのまま。
     if (([self.pageTitles count] == 0) || (index >= [self.pageTitles count])) {     // ページ数をカウント、indexと比較。
         return nil; // ページ数が0、もしくはページが実際のページ数内にない場合にはnilを返す。
     }
@@ -79,7 +84,7 @@
     PageContentViewController *pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageContentViewController"];
     pageContentViewController.imageFile = self.pageImages[index];   // モデル内のイメージ・データをpageContentViewのimageFileに渡す
     pageContentViewController.titleText = self.pageTitles[index];       // モデル内のタイトル・データをpageContentViewのtitleTextに渡す
-    pageContentViewController.pageIndex = &(index);                          //
+    pageContentViewController.pageIndex = index;
     
     return pageContentViewController;
 }
@@ -93,7 +98,9 @@
 // 左開きの時は戻る場合、右開きの時は進む場合に呼ばれる
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
 {
-    NSInteger index = *(((PageContentViewController*) viewController).pageIndex);       // 表示中のビューのページを参照して、indexに格納。
+    //NSInteger index = *(((PageContentViewController*) viewController).pageIndex);       // 表示中のビューのページを参照して、indexに格納。
+    NSUInteger index = ((PageContentViewController*) viewController).pageIndex;
+
     
     if ((index == 0) || (index == NSNotFound)) {
         return nil;     // 最初や最後のページならばそのまま。
@@ -109,7 +116,7 @@
 // 全てにおいて先ほどのメソッドと逆になる
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
 {
-    NSInteger index = *(((PageContentViewController*) viewController).pageIndex);   // 表示中のビューのページを参照して、indexに格納。
+    NSInteger index = ((PageContentViewController*) viewController).pageIndex;   // 表示中のビューのページを参照して、indexに格納。
     
     if (index == NSNotFound) {
         return nil;
@@ -120,6 +127,15 @@
         return nil;     // 次のページが最後sならば、特別な処理はしない。
     }
     return [self viewControllerAtIndex:index];
+}
+
+
+
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 

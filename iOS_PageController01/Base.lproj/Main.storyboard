@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
@@ -17,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mY7-CX-flf">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mY7-CX-flf">
                                 <rect key="frame" x="98" y="484" width="218" height="70"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Start agein">
@@ -30,12 +29,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="mY7-CX-flf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="78" id="3yb-So-eBe"/>
-                            <constraint firstItem="mY7-CX-flf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="464" id="d8G-Db-wB3"/>
-                            <constraint firstItem="mY7-CX-flf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mJL-UK-JNl"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mY7-CX-flf" secondAttribute="bottom" constant="182" id="s4g-FW-bN2"/>
-                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
@@ -55,30 +48,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yxt-p4-Kbf">
-                                <rect key="frame" x="0.0" y="20" width="414" height="675"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yxt-p4-Kbf">
+                                <rect key="frame" x="45" y="-42" width="30" height="3"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYf-ob-sQd">
-                                <rect key="frame" x="120" y="103" width="174" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="174" id="DCg-Dw-Pci"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYf-ob-sQd">
+                                <rect key="frame" x="123" y="65" width="168" height="49"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <color key="shadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="yxt-p4-Kbf" firstAttribute="centerX" secondItem="JYf-ob-sQd" secondAttribute="centerX" id="7wF-eQ-KBB"/>
-                            <constraint firstItem="rSl-QM-i2f" firstAttribute="top" secondItem="JYf-ob-sQd" secondAttribute="bottom" constant="584" id="Mk4-go-ggW"/>
-                            <constraint firstItem="JYf-ob-sQd" firstAttribute="top" secondItem="0vd-aQ-vfI" secondAttribute="bottom" constant="83" id="SRS-yR-ZGh"/>
-                            <constraint firstItem="rSl-QM-i2f" firstAttribute="top" secondItem="yxt-p4-Kbf" secondAttribute="bottom" constant="41" id="Zma-Vf-HPV"/>
-                            <constraint firstAttribute="trailing" secondItem="yxt-p4-Kbf" secondAttribute="trailing" id="eqB-Sj-RW0"/>
-                            <constraint firstItem="yxt-p4-Kbf" firstAttribute="leading" secondItem="thi-yb-HaF" secondAttribute="leading" id="fAu-1l-W7k"/>
-                            <constraint firstItem="yxt-p4-Kbf" firstAttribute="top" secondItem="0vd-aQ-vfI" secondAttribute="bottom" id="uiA-gl-sJ6"/>
-                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>

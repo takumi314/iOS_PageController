@@ -19,6 +19,9 @@
     
     // imageFile の画像をイメージオブジェクトに渡す
     _imageOnTheBackground.image = [UIImage imageNamed:_imageFile];
+    
+    // ラベルの文字列をセンタリング
+    _titleLabel.textAlignment = NSTextAlignmentCenter;
     // titleText の文字列をラベルオブジェクトに渡す
     _titleLabel.text = _titleText;
     
