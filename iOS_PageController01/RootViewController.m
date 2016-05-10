@@ -10,8 +10,8 @@
 
 
 @interface RootViewController ()
-
 @end
+
 
 @implementation RootViewController
 
@@ -101,7 +101,6 @@
     //NSInteger index = *(((PageContentViewController*) viewController).pageIndex);       // 表示中のビューのページを参照して、indexに格納。
     NSUInteger index = ((PageContentViewController*) viewController).pageIndex;
 
-    
     if ((index == 0) || (index == NSNotFound)) {
         return nil;     // 最初や最後のページならばそのまま。
     }

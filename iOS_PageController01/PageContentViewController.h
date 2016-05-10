@@ -12,9 +12,9 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageOnTheBackground;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
-@property NSUInteger pageIndex;     //現在のページを収納
-@property NSString *titleText;
-@property NSString *imageFile;
+@property NSUInteger pageIndex;     // 現在のページを収納
+@property NSString *titleText;            // 文字列を表示するラベル・オブジェクト
+@property NSString *imageFile;          // イメージファイル名の文字列を表示するラベル・オブジェクト
 
 
 @end

@@ -12,6 +12,7 @@
 
 @end
 
+
 @implementation PageContentViewController
 
 - (void)viewDidLoad {
@@ -25,9 +26,9 @@
     // titleText の文字列をラベルオブジェクトに渡す
     _titleLabel.text = _titleText;
     
-    
-    
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
